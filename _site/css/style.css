@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+/* ----------------------------- */
+/* Custom Properties             */
+/* ----------------------------- */
+:root {
+  /* font-family */
+  --ff-heading: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
+
+  /* colors */
+  --pink: hsl(322, 100%, 66%);
+  --very-pale-cyan: hsl(193, 100%, 96%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+
+  /* font-sizes */
+  --h1: 1.5rem;
+  --h2: 1.25rem;
+  --h2-cta: 1.125rem;
+  --body: 1rem;
+  --btn: 0.625rem;
+  --btn-cta: 0.75rem;
+  --footer: 0.75rem;
+  --link: 1.125rem;
+}
+
+@media (min-width: 420px) {
+  :root {
+    /* font-sizes */
+    --h1: 2.5rem;
+    --h2: 1.75rem;
+    --h2-cta: 2rem;
+    --body: 1.125rem;
+    --btn: 0.875rem;
+    --btn-cta: 1.25rem;
+    --footer: 0.8125rem;
+  }
+}
+
+/* ----------------------------- */
+/* Reset                         */
+/* ----------------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset Margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Body */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--body);
+  color: var(--grayish-blue);
+  /* min-height: 100vh;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: min-content 1fr; */
+}
+
+/* Images */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Forms */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Animation */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----------------------------- */
+/* Utility Classes               */
+/* ----------------------------- */
+.container {
+  margin-inline: auto;
+  max-width: 1114px;
+  width: 87.2%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.skip-to-content {
+  background: var(--very-pale-cyan);
+  color: var(--very-dark-cyan);
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-120%);
+  transition: transform 500ms ease-in;
+  position: absolute;
+  z-index: 1000;
+}
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+/* colors */
+.bg-white {
+  background-color: #fff;
+}
+.bg-pink {
+  background-color: var(--pink);
+}
+.bg-very-pale-cyan {
+  background-color: var(--very-pale-cyan);
+}
+.bg-very-dark-cyan {
+  background-color: var(--very-dark-cyan);
+}
+
+.text-very-dark-cyan {
+  color: var(--very-dark-cyan);
+}
+.text-grayish-blue {
+  color: var(--grayish-blue);
+}
+.text-white {
+  color: #fff;
+}
+
+/* typography */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.h1 {
+  font-size: var(--h1);
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.005em;
+}
+
+.h2 {
+  font-size: var(--h2);
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.h2-cta {
+  font-size: var(--h2-cta);
+  font-family: var(--ff-heading);
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+  letter-spacing: -0.0035em;
+}
+
+.body {
+  font-size: var(--body);
+  font-family: var(--ff-body);
+  font-weight: 400;
+  line-height: 150%;
+}
+.btn {
+  font-size: var(--btn);
+  font-family: var(--ff-body);
+  font-weight: 700;
+  line-height: 140%;
+}
+.btn-cta {
+  font-size: var(--btn-cta);
+  font-family: var(--ff-body);
+  font-weight: 700;
+  line-height: 150%;
+}
+.footer {
+  font-size: var(--footer);
+  font-family: var(--ff-body);
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.025em;
+}
+.link {
+  font-size: var(--link);
+  font-family: var(--ff-body);
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.text-center {
+  text-align: center;
+}
+/* ----------------------------- */
+/* Navigation                    */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Hero                         */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* BTN                         */
+/* ----------------------------- */
+.btn {
+  /* padding-inline: 2.25rem;
+  padding-block: 0.75rem;
+  border: solid 1px var(--black);
+  background-color: var(--white);
+  transition: all 0.35s ease-in;
+  cursor: pointer; */
+}
+.btn:hover {
+  /* background-color: var(--black);
+  color: var(--white); */
+}
+/* ----------------------------- */
+/* About                         */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Creations                     */
+/* ----------------------------- */
+
+/* ----------------------------- */
+/* Footer                         */
+/* ----------------------------- */
