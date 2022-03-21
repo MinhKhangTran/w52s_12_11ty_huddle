@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("ext", function (name, link) {
     return `<a class="footer__social" href="${link}" title="${link}" target="_blank" rel="noopener">
-                <img src="/images/icon-${name}.svg" alt="${name}"/>
+                <img width="32" height="32" src="/images/${name}.svg" alt="${name}"/>
               </a>`;
   });
   return {
