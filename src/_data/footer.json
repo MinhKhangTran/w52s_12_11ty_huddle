@@ -1,0 +1,63 @@
+{
+  "logo": "/images/logo-alt.svg",
+  "info": [
+    {
+      "id": 1,
+      "icon": "location",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    },
+    {
+      "id": 2,
+      "icon": "phone",
+      "text": "+1-543-123-4567"
+    },
+    {
+      "id": 3,
+      "icon": "email",
+      "text": "example@huddle.com"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "text": "About Us"
+    },
+    {
+      "id": 2,
+      "text": "What We Do"
+    },
+    {
+      "id": 3,
+      "text": "FAQ"
+    },
+    {
+      "id": 4,
+      "text": "Career"
+    },
+    {
+      "id": 5,
+      "text": "Blog"
+    },
+    {
+      "id": 6,
+      "text": "Contact Us"
+    }
+  ],
+  "socials": [
+    {
+      "id": 1,
+      "url": "https://www.facebook.com",
+      "icon": "facebook"
+    },
+    {
+      "id": 2,
+      "url": "https://www.twitter.com",
+      "icon": "twitter"
+    },
+    {
+      "id": 3,
+      "url": "https://www.instagram.com",
+      "icon": "instagram"
+    }
+  ]
+}
