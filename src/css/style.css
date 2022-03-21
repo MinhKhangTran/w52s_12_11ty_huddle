@@ -275,13 +275,55 @@ nav img {
 /* Hero                         */
 /* ----------------------------- */
 
+.hero__wrapper {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+.hero__wrapper--left p {
+  padding-block: 1.3125rem 2rem;
+}
+.hero__wrapper--right {
+  padding-top: 3.375rem;
+}
+
+@media (min-width: 500px) {
+  .hero__wrapper {
+    padding-block: 4rem;
+    text-align: left;
+    flex-direction: row;
+  }
+  .hero__wrapper--left {
+    width: 41.67%;
+  }
+  .hero__wrapper--right {
+    width: 58.3%;
+    padding-top: 0rem;
+  }
+  .hero__wrapper--left p {
+    padding-block: 1.75rem 2rem;
+  }
+}
 /* ----------------------------- */
 /* BTN                         */
 /* ----------------------------- */
+.btn-pink {
+  padding-inline: 3.6875rem;
+  padding-block: 0.65625rem;
+  border: none;
+  background: var(--pink);
+  border-radius: 90px;
+  color: #fff;
+  transition: all 0.35s ease-in;
+}
+.btn-pink:hover {
+  background: hsl(322, 100%, 80%);
+}
 .btn-white {
   padding-inline: 1.4375rem;
   padding-block: 0.3125rem;
-  background-color: var(--white);
+  background-color: #fff;
   transition: all 0.35s ease-in;
   border: none;
   border-radius: 90px;
@@ -289,13 +331,17 @@ nav img {
   color: var(--very-dark-cyan);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
-.btn:hover {
+.btn-white:hover {
   color: var(--grayish-blue);
 }
 @media (min-width: 500px) {
   .btn-white {
     padding-inline: 4rem;
     padding-block: 0.8125rem 1rem;
+  }
+  .btn-pink {
+    padding-inline: 4.3125rem;
+    padding-block: 1rem 1.1875rem;
   }
 }
 /* ----------------------------- */

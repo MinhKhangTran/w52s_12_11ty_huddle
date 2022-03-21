@@ -1,10 +1,10 @@
 {% include "partials/nav.html" %}
-<main id="main-content">
-    <div class="hero__wrapper">
+<div id="main-content" class="hero__wrapper container">
+    
   <div class="hero__wrapper--left">
       <h1 class="h1 text-very-dark-cyan">{{hero.title}}</h1>
       <p class="body text-very-dark-cyan">{{hero.text}}</p>
-      <button class="btn">{{hero.cta}}</button>
+      <button class="btn-pink">{{hero.cta}}</button>
     </div>
     <div class="hero__wrapper--right">
       <img
@@ -12,5 +12,5 @@
         alt="{{hero.image | capitalize}}"
       />
     </div>
-  </div>
+ </div>
  
