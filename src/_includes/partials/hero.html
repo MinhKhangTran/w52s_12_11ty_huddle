@@ -1,7 +1,7 @@
-<div class="hero__wrapper">
-  {% include "partials/nav.html" %}
-  <main id="main-content">
-    <div class="hero__wrapper--left">
+{% include "partials/nav.html" %}
+<main id="main-content">
+    <div class="hero__wrapper">
+  <div class="hero__wrapper--left">
       <h1 class="h1 text-very-dark-cyan">{{hero.title}}</h1>
       <p class="body text-very-dark-cyan">{{hero.text}}</p>
       <button class="btn">{{hero.cta}}</button>
@@ -12,5 +12,5 @@
         alt="{{hero.image | capitalize}}"
       />
     </div>
-  </main>
-</div>
+  </div>
+ 
