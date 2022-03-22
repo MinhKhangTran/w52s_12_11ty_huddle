@@ -4,21 +4,25 @@
       <img src="{{footer.logo}}" alt="logo home" />
     </a>
     <div class="footer__wrapper">
-      <div class="footer__info">
+      <address class="footer__info">
         {% for item in footer.info %}
         <div class="footer__info--whole footer__info--{{item.icon}}">
           <img src="/images/icon-{{item.icon}}.svg" alt="" aria-hidden="true" />
-          <p class="text-white">{{item.text}}</p>
+          <a class="text-white">{{item.text}}</a>
         </div>
         {% endfor %}
-      </div>
-      <div class="footer__links">
-        {% for item in footer.links %}
-        <p class="text-white footer__links--whole footer__link--{{item.id}}">
-          {{item.text}}
-        </p>
-        {% endfor %}
-      </div>
+      </address>
+      <nav class="footer__links" aria-labelledby="footer-navigation">
+        <span class="sr-only" id="footer-navigation">Footer navigation</span>
+        <ul>
+
+          {% for item in footer.links %}
+          <li class="text-white footer__links--whole footer__link--{{item.id}}">
+            {{item.text}}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
       <div class="footer__socials">
         {% for item in footer.socials %} {% ext item.icon, item.url %} {% endfor
         %}
