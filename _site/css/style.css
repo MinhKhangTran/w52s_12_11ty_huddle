@@ -387,6 +387,7 @@ nav img {
 @media (min-width: 820px) {
   #feat {
     padding-top: 10.1875rem;
+    padding-bottom: 2rem;
   }
   .feat__card {
     flex-direction: row;
@@ -422,7 +423,32 @@ nav img {
 /* ----------------------------- */
 /* Cta                           */
 /* ----------------------------- */
-
+.cta__wrapper {
+  /* box-shadow: 0 0px 15px rgb(0 0 0 / 0.15); */
+  width: 352px;
+  margin-inline: auto;
+  padding-block: 2.75rem 2.5rem;
+  padding-inline: 1.5rem;
+  border-radius: 12px;
+  transform: translateY(50%);
+  z-index: 100;
+  background-color: white;
+}
+.cta__wrapper h2 {
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 820px) {
+  .cta__wrapper {
+    width: 800px;
+    padding-block: 4rem 3.25rem;
+  }
+  .cta__wrapper h2 {
+    padding-bottom: 2.1875rem;
+  }
+}
 /* ----------------------------- */
 /* Footer                         */
 /* ----------------------------- */
+footer {
+  z-index: 1;
+}
