@@ -252,6 +252,17 @@ ul {
 .text-center {
   text-align: center;
 }
+main {
+  position: relative;
+  background: url(../images/bg-hero-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+@media (min-width: 420px) {
+  main {
+    background: url(../images/bg-hero-desktop.svg);
+  }
+}
 /* ----------------------------- */
 /* Navigation                    */
 /* ----------------------------- */
@@ -420,6 +431,7 @@ nav img {
     width: 420px;
     margin-inline-start: auto;
     padding-inline-end: 1.8125rem;
+    padding-top: 0;
   }
   .feat__card--2 img {
     margin-right: auto;
