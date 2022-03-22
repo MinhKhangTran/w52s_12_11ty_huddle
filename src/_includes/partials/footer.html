@@ -15,9 +15,10 @@
       <nav class="footer__links" aria-labelledby="footer-navigation">
         <span class="sr-only" id="footer-navigation">Footer navigation</span>
         <ul>
-
           {% for item in footer.links %}
-          <li class="text-white footer__links--whole footer__link--{{item.id}}">
+          <li
+            class="text-white footer__links--whole footer__link footer__link--{{item.id}}"
+          >
             {{item.text}}
           </li>
           {% endfor %}
@@ -28,7 +29,7 @@
         %}
       </div>
       <div class="footer__copy text-center">
-        <p class="footer">{{footer.copyright}}</p>
+        <p class="footer">&copy;{{footer.copyright}}</p>
       </div>
     </div>
   </div>

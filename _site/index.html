@@ -17,8 +17,9 @@
     <a class="skip-to-content" href="#main-content">Skip to content</a>
     <main class="bg-very-pale-cyan">
     <header class="container">
-  <nav>
-    <a href="/">
+  <nav aria-labelledby="primary-navigation">
+    <span class="sr-only" id="primary-navigation">Primary navigation</span>
+    <a id="primary-navigation" href="/">
       <img src="/images/logo.svg" alt="home" />
     </a>
     <button class="btn-white btn">Try It Free</button>
@@ -86,12 +87,12 @@
   </div>
 </section>
 
-    <section class="bg-white" id="cta" aria-label="cta section">
+    <article class="bg-white" id="cta" aria-label="cta section">
   <div class="cta__wrapper text-center">
     <h2 class="h2-cta text-very-dark-cyan">Ready To Build Your Community?</h2>
     <button class="btn-cta btn-pink">Get Started For Free</button>
   </div>
-</section>
+</article>
 
 </main>
     <footer class="bg-very-dark-cyan">
@@ -100,62 +101,83 @@
       <img src="/images/logo-alt.svg" alt="logo home" />
     </a>
     <div class="footer__wrapper">
-      <div class="footer__info">
+      <address class="footer__info">
         
         <div class="footer__info--whole footer__info--location">
           <img src="/images/icon-location.svg" alt="" aria-hidden="true" />
-          <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+          <a class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a>
         </div>
         
         <div class="footer__info--whole footer__info--phone">
           <img src="/images/icon-phone.svg" alt="" aria-hidden="true" />
-          <p class="text-white">+1-543-123-4567</p>
+          <a class="text-white">+1-543-123-4567</a>
         </div>
         
         <div class="footer__info--whole footer__info--email">
           <img src="/images/icon-email.svg" alt="" aria-hidden="true" />
-          <p class="text-white">example@huddle.com</p>
+          <a class="text-white">example@huddle.com</a>
         </div>
         
-      </div>
-      <div class="footer__links">
-        
-        <p class="text-white footer__links--whole footer__link--1">
-          About Us
-        </p>
-        
-        <p class="text-white footer__links--whole footer__link--2">
-          What We Do
-        </p>
-        
-        <p class="text-white footer__links--whole footer__link--3">
-          FAQ
-        </p>
-        
-        <p class="text-white footer__links--whole footer__link--4">
-          Career
-        </p>
-        
-        <p class="text-white footer__links--whole footer__link--5">
-          Blog
-        </p>
-        
-        <p class="text-white footer__links--whole footer__link--6">
-          Contact Us
-        </p>
-        
-      </div>
+      </address>
+      <nav class="footer__links" aria-labelledby="footer-navigation">
+        <span class="sr-only" id="footer-navigation">Footer navigation</span>
+        <ul>
+          
+          <li
+            class="text-white footer__links--whole footer__link footer__link--1"
+          >
+            About Us
+          </li>
+          
+          <li
+            class="text-white footer__links--whole footer__link footer__link--2"
+          >
+            What We Do
+          </li>
+          
+          <li
+            class="text-white footer__links--whole footer__link footer__link--3"
+          >
+            FAQ
+          </li>
+          
+          <li
+            class="text-white footer__links--whole footer__link footer__link--4"
+          >
+            Career
+          </li>
+          
+          <li
+            class="text-white footer__links--whole footer__link footer__link--5"
+          >
+            Blog
+          </li>
+          
+          <li
+            class="text-white footer__links--whole footer__link footer__link--6"
+          >
+            Contact Us
+          </li>
+          
+        </ul>
+      </nav>
       <div class="footer__socials">
          <a class="footer__social" href="https://www.facebook.com" title="https://www.facebook.com" target="_blank" rel="noopener">
-                <img width="32" height="32" src="/images/facebook.svg" alt="facebook"/>
-              </a>  <a class="footer__social" href="https://www.twitter.com" title="https://www.twitter.com" target="_blank" rel="noopener">
-                <img width="32" height="32" src="/images/twitter.svg" alt="twitter"/>
-              </a>  <a class="footer__social" href="https://www.instagram.com" title="https://www.instagram.com" target="_blank" rel="noopener">
-                <img width="32" height="32" src="/images/instagram.svg" alt="instagram"/>
-              </a> 
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 0C24.8363 0 32 7.16375 32 16C32 24.8363 24.8363 32 16 32C7.16375 32 0 24.8363 0 16C0 7.16375 7.16375 0 16 0ZM13.6069 23.5919V16.3081H12.5781C12.2656 16.3081 12.0125 16.0544 12.0125 15.7425V13.4362C12.0125 13.1256 12.2669 12.8713 12.5781 12.8713H13.6069V11.0169C13.6069 9.26375 15.0288 7.8425 16.7819 7.8425H19.4219C19.7344 7.8425 19.9875 8.09562 19.9875 8.40812V10.7137C19.9875 11.0262 19.7344 11.2794 19.4219 11.2794H17.8594C17.6812 11.2794 17.5344 11.4262 17.5344 11.6044V12.8725L19.3875 12.8713C19.7 12.8931 19.9531 13.1037 19.9531 13.4362C19.8981 14.2175 19.8219 15.0069 19.7556 15.7894C19.7312 16.0813 19.4856 16.3081 19.1925 16.3081H17.5344V23.5919C17.5344 23.9025 17.2806 24.1569 16.9694 24.1569L14.1725 24.1575C13.8606 24.1575 13.6069 23.9037 13.6069 23.5919ZM14.3456 23.42H16.7956V15.5694H19.0338L19.1994 13.6081H16.7956V11.6044C16.7956 11.0169 17.2719 10.5406 17.8594 10.5406H19.2488V8.58125H16.7819C15.4363 8.58125 14.3456 9.67188 14.3456 11.0169V13.6094H12.7513V15.5694H14.3456V23.42ZM16 0.738125C7.57125 0.738125 0.738125 7.57125 0.738125 16C0.738125 24.4287 7.57125 31.2619 16 31.2619C24.4287 31.2619 31.2619 24.4287 31.2619 16C31.2619 7.57125 24.4287 0.738125 16 0.738125Z" fill="white"/>
+                  </svg>
+                </a>  <a class="footer__social" href="https://www.twitter.com" title="https://www.twitter.com" target="_blank" rel="noopener">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 0C24.8363 0 32 7.16375 32 16C32 24.8363 24.8363 32 16 32C7.16375 32 0 24.8363 0 16C0 7.16375 7.16375 0 16 0ZM25.135 10.1337C24.8644 9.95063 23.9925 10.5425 23.6462 10.6425C23.8681 10.3837 24.9519 9.09125 24.5625 8.68062C23.9225 9.045 23.1669 9.39812 22.1356 9.42875C21.4031 8.73188 20.4531 8.35 19.4431 8.35C17.0294 8.35 15.2312 10.5131 15.5406 12.8713C11.7337 12.8069 8.92938 9.04625 8.47313 9.08937C8.35063 9.1 8.24125 9.17 8.17937 9.27625C7.135 11.0887 7.77312 12.6888 8.41375 13.6469C8.12625 13.4756 7.66375 13.3306 7.655 13.84C7.62688 15.5781 8.43937 16.595 9.22875 17.1719C9.00063 17.2031 8.85188 17.4319 8.91938 17.6544C9.46688 19.4456 10.7944 20.0806 11.6706 20.305C9.8975 21.6425 7.32812 21.2062 7.29938 21.2006C6.9125 21.1325 6.69312 21.6331 7.00437 21.8706C9.11875 23.4844 12.3981 23.9894 14.9812 23.4312C23.2169 21.48 23.4781 13.955 23.4613 12.6731C23.7013 12.4494 25.2725 11.1169 25.135 10.1337ZM22.7044 12.5381C22.7056 12.5588 22.8319 14.5981 21.9231 16.8706C20.7087 19.9069 18.315 21.8681 14.8156 22.6975C14.7781 22.705 11.5406 23.3756 8.69875 22.0238C9.91375 21.9731 11.5962 21.6306 12.78 20.3019C12.8787 20.1912 12.9025 20.02 12.8419 19.8844C12.6031 19.3556 10.8356 19.9475 9.86063 17.9819C10.2069 17.9969 11.1875 17.9906 11.1263 17.4481C11.0544 16.8138 8.81437 17.0963 8.44687 14.505C8.77 14.64 9.67062 14.9012 9.815 14.4069C9.985 13.8237 7.59563 12.6488 8.6 10.1281C9.61438 11.1844 12.5075 13.8156 16.015 13.6144C16.25 13.6006 16.4156 13.3756 16.3581 13.1469C15.855 11.1413 17.3231 9.1025 19.4431 9.1025C20.3019 9.1025 21.1075 9.44562 21.7113 10.0681C22.0019 10.3681 23.2806 9.92937 23.6019 9.80937C23.4088 10.0356 23.0806 10.3981 22.7031 10.6944C22.5725 10.7969 22.5244 10.9731 22.585 11.1275C22.7456 11.5387 23.6481 11.275 23.97 11.21C23.7037 11.4931 22.8062 12.1919 22.7044 12.5381ZM16 0.738125C7.57125 0.738125 0.738125 7.57125 0.738125 16C0.738125 24.4287 7.57125 31.2619 16 31.2619C24.4287 31.2619 31.2619 24.4287 31.2619 16C31.2619 7.57125 24.4287 0.738125 16 0.738125Z" fill="white"/>
+                  </svg>
+                </a>  <a class="footer__social" href="https://www.instagram.com" title="https://www.instagram.com" target="_blank" rel="noopener">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 0.00561523C24.8331 0.00561523 31.9944 7.16687 31.9944 16C31.9944 24.8331 24.8331 31.9944 16 31.9944C7.16687 31.9944 0.00561523 24.8331 0.00561523 16C0.00561523 7.16687 7.16687 0.00561523 16 0.00561523ZM12.7469 8.48624C10.06 8.60937 8.60874 10.0587 8.48687 12.7469C8.38812 14.9081 8.38812 17.0925 8.48687 19.2531C8.60874 21.9412 10.06 23.3912 12.7469 23.5137C14.9081 23.6119 17.0925 23.6119 19.2537 23.5137C21.9419 23.3906 23.3906 21.9412 23.5137 19.2531C23.6119 17.0919 23.6112 14.9081 23.5137 12.7469C23.3912 10.0631 21.9375 8.60874 19.2537 8.48624C17.0925 8.38812 14.9081 8.38812 12.7469 8.48624ZM21.5519 11.7694C21.5519 12.4975 20.9612 13.0881 20.2325 13.0881C19.505 13.0881 18.9119 12.495 18.9119 11.7675C18.9494 11.0269 19.47 10.4469 20.2325 10.4469C20.9337 10.4469 21.5387 11.055 21.5519 11.7694ZM20.8169 11.7675C20.8169 11.445 20.555 11.185 20.2325 11.185C19.8956 11.185 19.665 11.4412 19.6487 11.7687C19.6487 12.0931 19.9087 12.35 20.2325 12.35C20.5412 12.35 20.8112 12.0862 20.8169 11.7675ZM16 19.0119C14.3369 19.0119 12.9881 17.6637 12.9881 16C12.9881 14.335 14.335 12.9881 16 12.9881C17.6637 12.9881 19.0125 14.3362 19.0125 16C19.0125 17.6644 17.6644 19.0119 16 19.0119ZM15.9994 18.2756C17.2944 18.2437 18.2744 17.3187 18.2744 16C18.2744 14.7444 17.2562 13.7262 16 13.7262C14.745 13.7262 13.725 14.745 13.725 16C13.7637 17.27 14.7081 18.2756 15.9994 18.2756ZM12.2975 16C12.2975 18.0456 13.9537 19.7037 16 19.7037C18.0444 19.7037 19.7025 18.0437 19.7025 16C19.7025 13.9562 18.0444 12.2962 16 12.2962C13.9387 12.3369 12.2975 13.9181 12.2975 16ZM16 11.5606C18.4531 11.5606 20.4412 13.5462 20.4412 16C20.4412 18.4544 18.4544 20.4406 16 20.4406C13.5481 20.4406 11.5594 18.4525 11.5594 16C11.5594 13.5469 13.5475 11.5606 16 11.5606ZM12.7156 7.75124C14.9031 7.65187 17.0975 7.65187 19.285 7.75124C22.3581 7.89124 24.1087 9.64187 24.2494 12.715C24.3481 14.9031 24.3481 17.0969 24.2494 19.285C24.1081 22.3625 22.3631 24.1081 19.285 24.2487C17.0975 24.3481 14.9031 24.3481 12.7156 24.2487C9.63937 24.1087 7.89124 22.3619 7.75187 19.285C7.65187 17.0975 7.65187 14.9031 7.75187 12.715C7.89124 9.63812 9.63937 7.89187 12.7156 7.75124ZM19.22 9.17812C21.5506 9.28437 22.7162 10.4494 22.8219 12.78C22.92 14.9244 22.92 17.0756 22.8219 19.22C22.7162 21.555 21.55 22.7156 19.22 22.8219C17.0756 22.9194 14.9244 22.9194 12.7806 22.8219C10.45 22.7156 9.28499 21.555 9.17874 19.22C9.08062 17.0756 9.08062 14.9244 9.17874 12.78C9.28437 10.4494 10.4456 9.28499 12.7806 9.17812C14.9244 9.08062 17.0756 9.08062 19.22 9.17812ZM19.1881 9.91374C17.0706 9.81687 14.93 9.81687 12.8119 9.91374C10.8644 10.0025 10.0025 10.8681 9.91374 12.8119C9.81687 14.9294 9.81687 17.0706 9.91374 19.1881C10.0025 21.1362 10.8681 21.9981 12.8119 22.0862C14.93 22.1825 17.0706 22.1825 19.1881 22.0862C21.1319 21.9981 21.9987 21.1362 22.0862 19.1881C22.1831 17.0706 22.1837 14.9294 22.0862 12.8119C21.9987 10.8712 21.1281 10.0019 19.1881 9.91374ZM16 0.744365C7.57437 0.744365 0.74374 7.57437 0.74374 16C0.74374 24.4256 7.57437 31.2556 16 31.2556C24.4256 31.2556 31.2562 24.4256 31.2562 16C31.2562 7.57437 24.4256 0.744365 16 0.744365Z" fill="white"/>
+                  </svg>
+                </a> 
       </div>
       <div class="footer__copy text-center">
-        <p class="footer">&amp;copy; Copyright 2018 Huddle. All rights reserved.</p>
+        <p class="footer">&copy; Copyright 2018 Huddle. All rights reserved.</p>
       </div>
     </div>
   </div>

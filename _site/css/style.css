@@ -182,6 +182,10 @@ ul {
 .text-white {
   color: #fff;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
 
 /* typography */
 
@@ -327,6 +331,7 @@ nav img {
   border-radius: 90px;
   color: #fff;
   transition: all 0.35s ease-in;
+  cursor: pointer;
 }
 .btn-pink:hover {
   background: hsl(322, 100%, 80%);
@@ -478,6 +483,98 @@ footer {
 .footer__socials {
   display: flex;
   gap: 0.75rem;
+  padding-top: 3.5rem;
   justify-content: center;
   color: white;
+}
+.footer__copy {
+  padding-block: 1.5rem 3rem;
+}
+.footer__social path {
+  transition: all 0.35s ease-in;
+}
+.footer__social:hover path {
+  fill: var(--pink);
+}
+.footer__link {
+  transition: all 0.35s ease-in;
+  cursor: pointer;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 820px) {
+  footer {
+    padding-top: 12rem;
+    padding-inline: 2.5rem;
+  }
+  .footer__wrapper {
+    display: grid;
+    padding-top: 2.5rem;
+    grid-template-areas:
+      "info links socials"
+      ". . copy";
+  }
+  .footer__info {
+    grid-area: info;
+    width: 375px;
+    display: grid;
+    row-gap: 1.5rem;
+  }
+  .footer__info--whole {
+    padding-top: 0rem;
+  }
+
+  .footer__links {
+    padding-top: 0rem;
+    grid-area: links;
+    align-items: flex-start;
+  }
+  .footer__links ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 7.5rem;
+    row-gap: 1rem;
+    grid-template-areas:
+      "about career"
+      "what blog"
+      "faq contact";
+  }
+
+  .footer__link--1 {
+    grid-area: about;
+    padding: 0;
+  }
+  .footer__link--2 {
+    grid-area: what;
+    padding: 0;
+  }
+  .footer__link--3 {
+    grid-area: faq;
+    padding: 0;
+  }
+  .footer__link--4 {
+    grid-area: career;
+    padding: 0;
+  }
+  .footer__link--5 {
+    grid-area: blog;
+    padding: 0;
+  }
+  .footer__link--6 {
+    grid-area: contact;
+    padding: 0;
+  }
+  .footer__socials {
+    grid-area: socials;
+    padding-top: 0rem;
+  }
+  .footer__social {
+    align-self: flex-start;
+  }
+  .footer__copy {
+    grid-area: copy;
+    padding-block: 2.5rem 4rem;
+  }
 }
