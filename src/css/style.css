@@ -182,6 +182,10 @@ ul {
 .text-white {
   color: #fff;
 }
+ul{
+  margin:0;
+  padding:0;
+}
 
 /* typography */
 
