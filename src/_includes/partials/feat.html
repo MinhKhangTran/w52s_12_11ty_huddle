@@ -1,7 +1,7 @@
-<section id="feat" aria-label="feat section">
-  <div class="feat__wrapper">
+<section class="bg-white" id="feat" aria-label="feat section">
+  <div class="feat__wrapper container">
     {% for item in feat %}
-    <div class="feat__card--{{item.id}}">
+    <div class="feat__card feat__card--{{item.id}}">
       <div class="feat__card--start">
         <h2 class="h2 text-very-dark-cyan">{{item.title}}</h2>
         <p class="body">{{item.text}}</p>

@@ -280,6 +280,7 @@ nav img {
   text-align: center;
   flex-direction: column;
   padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 .hero__wrapper--left p {
   padding-block: 1.3125rem 2rem;
@@ -339,7 +340,7 @@ nav img {
   border-radius: 90px;
   cursor: pointer;
   color: var(--very-dark-cyan);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  box-shadow: 0 0px 15px rgb(0 0 0 / 0.15);
 }
 .btn-white:hover {
   color: var(--grayish-blue);
@@ -355,11 +356,71 @@ nav img {
   }
 }
 /* ----------------------------- */
-/* About                         */
+/* Feat                         */
 /* ----------------------------- */
-
+#feat {
+  padding-top: 3.875rem;
+}
+.feat__card {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-inline: 1.5rem;
+  align-items: center;
+  box-shadow: 0 0px 15px rgb(0 0 0 / 0.15);
+  border-radius: 16px;
+}
+.feat__card--start {
+  text-align: center;
+  padding-block: 0rem 2rem;
+  padding-inline: 1.375rem;
+}
+.feat__card--start h2 {
+  padding-block: 3.75rem 0.875rem;
+}
+.feat__card--end img {
+  width: 240px;
+  padding-top: 4rem;
+}
+.feat__card--2 {
+  margin-block: 2.5rem;
+}
+@media (min-width: 820px) {
+  #feat {
+    padding-top: 10.1875rem;
+  }
+  .feat__card {
+    flex-direction: row;
+    margin-inline: 1.5rem;
+    align-items: center;
+  }
+  .feat__card--2 {
+    margin-block: 1.5rem;
+    flex-direction: row-reverse;
+  }
+  .feat__card--end,
+  .feat__card--start {
+    width: 50%;
+  }
+  .feat__card--start {
+    padding-left: 7.5rem;
+    padding-block: 9.625rem 9.375rem;
+    text-align: left;
+  }
+  .feat__card--start p {
+    width: 485px;
+  }
+  .feat__card--end img {
+    width: 420px;
+    margin-inline-start: auto;
+    padding-inline-end: 1.8125rem;
+  }
+  .feat__card--2 img {
+    margin-right: auto;
+    margin-left: 7.5rem;
+  }
+}
 /* ----------------------------- */
-/* Creations                     */
+/* Cta                           */
 /* ----------------------------- */
 
 /* ----------------------------- */
